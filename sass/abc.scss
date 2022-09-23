@@ -1,0 +1,33 @@
+$font_Size: 20px;
+
+
+.classuno{
+
+    font-size: $font_Size;
+    background-color: antiquewhite;
+}
+
+.classdos{
+    font-size: $font_Size;
+    background-color: black;
+}
+
+
+.classtres{
+    div{
+        p{
+            font-size: $font_Size;
+        }
+        color: bisque;
+    }
+    ul{
+        margin: 5px;
+        font-size: $font_Size;
+    }
+    a{
+        margin: 5px;
+        color: red;
+        font-size: $font_Size;
+    }
+    
+}

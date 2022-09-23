@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="rdest.css">
+        <title >Veer Jadimath Resume</title>
+    </head>
+    <body style="background-color:#bde2c8">
+
+
+        <div class="blockuno">
+            <div class="veer" id="first">
+                <h1>
+                    <b>Veer Shivamurthy Jadimath</b>
+                </h1>
+            </div>
+            <div>
+                <h3>Contact Information</h3>
+                <ul>Phone Number: +91 9999999999</ul>
+                <ul>Email: abc@hotmail.com</ul>
+            </div>
+
+            <br>
+        </div>
+        
+        <hr>
+
+        <div class="blockdos">
+            <div class="allbutton">
+                <div id="about_me_button" class="allheader" onclick="aboutme()"><h3><mark><b>About me</b></mark></h3>
+                </div>
+
+                <div id ="educationtable_Button" class="allheader" onclick="education()"><h3><mark><b>Education</b></mark></h3>
+                </div>
+
+                <div id ="internshiptable_Button" class="allheader" onclick="internship()"><h3><mark><b>Internships</b></mark></h3>
+                </div>
+
+                <div id="projecttable_Button" class="allheader" onclick="project()"><h3><mark><b>Projects</b></mark></h3>
+                </div>
+            </div>
+
+            <div class="content_Block">
+                <div class="all_Table" id="aboutme_content">
+                    <p>
+                        Six years of experience facilitating cutting-edge engineering solutions with a wide range of e-commerce application and technology skills. Proven ability to leverage
+                        full-stack expertise to build interactive and user-centered website designs to scale. Extensive expertise in large system architecture development and administration,
+                        as well as network design and configuration.Six years of experience facilitating cutting-edge engineering solutions with a wide range of e-commerce application and technology skills. Proven ability to leverage
+                        full-stack expertise to build interactive and user-centered website designs to scale. Extensive expertise in large system architecture development and administration,
+                        as well as network design and configuration.
+                    </p>
+                </div>
+                <div class="all_Table" id="education_Table">
+                    <table>
+                        <tr>
+                            <th>Qualification&emsp;</th>
+                            <th>Institution&emsp;</th>
+                            <th>&emsp;Year&emsp;</th>
+                            <th>Result</th>
+                        </tr>
+                        <tr>
+                            <td>10th</td>
+                            <td>CBSE</td>
+                            <td>2016</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>12th</td>
+                            <td>MH-HSC</td>
+                            <td>2018</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>B.E(Computer Science)</td>
+                            <td>VTU</td>
+                            <td>2022</td>
+                            <td>8.0 CGPA</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="all_Table" id="internship_Table">
+                    <table>
+                        <tr>
+                            <th>Institution &emsp;</th>
+                            <th>&emsp;&emsp;Position</th>
+                            <th>Project Name</th>
+                            <th>Start Month</th>
+                            <th>End Month</th>
+                        </tr>
+                        <tr>
+                            <td>Reliance Industries Limitied</td>
+                            <td>Summer Trainee</td>
+                            <td>Basic Hardwre VM(Vsphere) system</td>
+                            <td>JAN 2019</td>
+                            <td>FEB 2019</td>
+                        </tr>
+                        <tr>
+                            <td>Tarun Bharat Daily Pvt Ltd</td>
+                            <td>Assistant developer</td>
+                            <td>Qualitative and quantitative analysis of product on conveyor belt</td>
+                            <td>SEPT 2021</td>
+                            <td>NOV 2021</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="all_Table" id="project_Table">
+                    <table>
+                        <tr>
+                            <th>Sr.no</th>
+                            <th>Project Name</th>
+                            <th>Year</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Illustration of trignometric functions using OpenGL</td>
+                            <td>2021</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Detection of bird species using Deep Learning</td>
+                            <td>2022</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        
+        <br>
+        <hr>
+
+
+        <div class="footer">
+            <input type="button" value="reset" onclick="clear_all_contents()">
+        </div>
+
+
+        <script>
+
+            
+            function clear_all_contents(){
+                $("#aboutme_content").hide();
+                $("#education_Table").hide();
+                $("#internship_Table").hide();
+                $("#project_Table").hide();
+                clear_all_values();
+            };
+
+            var aboutme_status = 0;
+            var education_status = 0;
+            var internship_status = 0;
+            var project_status = 0;
+
+            function clear_all_values(){
+                aboutme_status = 0;
+                education_status = 0;
+                internship_status = 0;
+                project_status = 0;
+            };
+            clear_all_contents();
+
+            function aboutme(e){
+                if (parseInt(aboutme_status) >= 1)
+                {
+                    alert('this function is already displayed');
+                    clear_all_values();
+                }
+                else{
+                    clear_all_contents();
+                    $("#aboutme_content").show();
+                    aboutme_status = 1;
+                }
+            };
+
+            function education(e){
+                if (parseInt(education_status) >= 1)
+                {
+                    alert('this function is already displayed');
+                    clear_all_values();
+                }
+                else{
+                    clear_all_contents();
+                    $("#education_Table").show();
+                    education_status = 1;
+                }
+
+            };
+
+            // document.getElementById("educationtable_Button").addEventListener("click", (evt) =>{
+            //     console.log("Click : ", evt);
+            // })
+            function internship(e){
+                if (parseInt(internship_status) >= 1)
+                {
+                    alert('internship function is already displayed');
+                    clear_all_values();
+                }
+                else{
+                    clear_all_contents();
+                    $("#internship_Table").show();
+                    internship_status = 1;
+                }
+            };
+            function project(e){
+                if (parseInt(project_status) >= 1) {
+                    alert('this function is already displayed');
+                    clear_all_values();
+                }
+                else{
+                    clear_all_contents();
+                    $("#project_Table").show();
+                    project_status = 1;
+                }
+            };
+
+        </script>
+    </body>
+</html>
+

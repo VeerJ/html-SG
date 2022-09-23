@@ -1,0 +1,35 @@
+.main {
+  width: 500px;
+  height: 500px;
+  margin-left: 10%;
+  margin-top: 10%;
+  background-color: bisque;
+}
+.main .button {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+#one {
+  background-color: red;
+}
+
+#two {
+  background-color: blue;
+}
+
+#three {
+  background-color: green;
+}
+
+#four {
+  background-color: orange;
+}
+
+#five {
+  background-color: green;
+}
+
+/*# sourceMappingURL=testdest.css.map */

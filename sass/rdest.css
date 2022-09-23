@@ -1,0 +1,33 @@
+.allheader {
+  height: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.blockdos {
+  height: 400px;
+  align-items: center;
+}
+
+.allbutton {
+  float: left;
+  height: 400px;
+  width: 20%;
+  background-color: aqua;
+}
+
+.content_Block {
+  float: right;
+  height: 400px;
+  width: 80%;
+  align-items: center;
+}
+
+.all_Table {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=rdest.css.map */

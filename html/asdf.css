@@ -1,0 +1,62 @@
+
+p{
+width: 1000px;
+padding-left: 50px;
+
+}
+
+table{
+    border-left: 5px solid black;
+    /* border-top: 3px solid black; */
+    border-bottom: 2px solid black;
+    width: auto;
+    height:100px;
+}
+
+#table {
+    border:1px solid red;
+    align-content: center;
+    color: saddlebrown;
+    width:200px;
+    height:100px;
+    align-self: center
+}
+
+td{
+    text-align:center;
+    border: 1px solid black;
+} 
+
+th{
+    text-align:center;
+    color: blueviolet;
+    background-color: #c0ded9;
+    border-bottom: 3px solid black;
+}
+
+
+
+mark {
+    background-color: #ebc5c5;
+    color: red;
+ }
+
+ hr {
+    border:none;
+    border-top:1px dashed black;
+    color:#fff;
+    background-color:#fff;
+    height:1px;
+    width:100%;
+}
+
+ul{
+    text-decoration: underline;
+    text-align: left;
+}
+
+#first{
+    width: 1000px;
+    padding-left: 50px;
+    background-color: #c0ded9;
+}

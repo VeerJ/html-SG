@@ -1,0 +1,127 @@
+<html>
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+<body id="b" style="background-color:antiquewhite">
+    First input: <input type="text" id="txt1" />
+    Second input: <input type="text" id="txt2" />
+    <hr />
+    <br />
+    <input type="button" id="but1" value="SUBMIT"></input>
+    <input type="button" id="but2" value="RESET"></input>
+    <hr />
+    <br />
+
+    <p id="paragraph">
+        The answer of the above numbers is :<input type="text" id="txt3" />
+    </p>
+    <div>
+        <p id="p"></p>
+
+    </div>
+    <div id="d" width="500px">
+        This is a div container
+    </div>
+    <div id="d1" width="500px">
+        This is a div container   2
+    </div>
+    <script>
+
+        function show() {
+            $("#p").show();
+        };
+        function hide() {
+            $("#p").hide();
+        };
+        function reset() {
+            $("#txt1").val("");
+            $("#txt2").val("");
+            $("#txt3").val("");
+            $("#b").css('background-color', 'antiquewhite');
+            hide();
+            alert("everything is reset");
+        };
+        function time() {
+            mytimeout = setTimeout(reset, 2000);
+        }
+
+        function orange1() {
+            console.log("second click");
+            $("#b").css('background-color', 'orange');
+        };
+        function white1() {
+            $("#b").css('background-color', 'white');
+        };
+        function green1() {
+            $("#b").css('background-color', 'green');
+        };
+        function orangetime() {
+            orange1();
+            w = setTimeout(whitetime, 500);
+        };
+        function whitetime() {
+            white1();
+            g = setTimeout(greentime, 500);
+        };
+        function greentime() {
+            green1();
+            o = setTimeout(orange1, 500);
+        };
+
+               $("#but1").click(function () {
+                    console.log("first click");
+                   var x = $("#txt1").val();
+                   var y = $("#txt2").val();
+                   var r = parseInt(x) + parseInt(y);
+                   $("#txt3").val(r);
+                   if (r > 100) {
+                       $("#p").html("pass");
+                       $("#b").css('background-color', 'green');
+                   }
+                   else {
+                       $("#p").html("fail");
+                       $("#b").css('background-color', 'red');
+                   }
+                   show();
+               });
+
+               $("#but1").on("mousedown", orange1);
+               $("#but1").on("mousedown", orange1);
+       
+        $("#but2").hover(function () {
+            $(this).css("background-color", "yellow");
+        }, function () {
+            $(this).css("background-color", "pink");
+        });
+
+
+        $("#but1").focus(function () {
+            $("#but1").css('background-color', 'black')
+        });
+        $("#but1").blur(function () {
+            $("#but1").removeAttr('style');
+        });
+
+        $("#d").mousedown(function () {
+            $("#d").css('background-color', 'black');
+        });
+
+        $("#d").mouseup(function () {
+            $("#d").css('background-color', 'white');
+        });
+
+        $("#d1").on("mouseup", function () {
+            $("#d1").css('background-color', 'pink');
+        });
+
+
+        $("#but2").click(function () {
+            orangetime();
+        });
+
+
+    </script>
+</body>
+</html>
